@@ -1,0 +1,318 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: #ff0000;
+    --background-color: #ffffff;
+    --nav-background-color: #f8f8f8; /* Added a background color for the navbar */
+    --nav-text-color: #333; /* Added a text color for the navbar */
+    --hero-text-color: #333; /* Added a text color for the hero section */
+    --skills-text-color: #333; /* Added a text color for the skills section */
+    --contact-text-color: #333; /* Added a text color for the contact section */
+    --border-color: #ddd; /* Added a border color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+    color: var(--text-color); /* Set default text color for the body */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: var(--text-color); /* Change link color on hover */
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    background-color: var(--nav-background-color); /* Use the new variable */
+    color: var(--nav-text-color); /* Use the new variable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 100; /* Ensure it stays on top */
+}
+
+nav .left a {
+    color: inherit; /* Inherit color from nav */
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: inherit; /* Inherit color from nav */
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav .right a:last-child:hover {
+    background-color: var(--link-color); /* Change background on hover */
+    color: var(--background-color); /* Change text color on hover */
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/* SECTION 1: Hero */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+    color: var(--hero-text-color); /* Use the new variable */
+}
+
+.hero-section .text {
+    flex: 5;
+}
+
+.hero-section .text h2 {
+    font-size: 45px;
+    line-height: 1.2; /* Improve readability */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.hero-section .text .links {
+    margin-top: 25px;
+}
+
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.hero-section .text .links a:hover {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.hero-section .headshot img {
+    width: 350px; /* Changed to px */
+    height: 350px; /* Changed to px */
+    border-radius: 50%;
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+/* SECTION 2: Skills */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    color: var(--skills-text-color); /* Use the new variable */
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 15px;
+    border: 2px solid var(--border-color); /* Use the new variable */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.skills-section .cells .cell:hover {
+    transform: translateY(-5px); /* Lift the cell on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+}
+
+/* SECTION 3: Contact */
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    color: var(--contact-text-color); /* Use the new variable */
+}
+
+.contact-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--link-color);
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+    border-color: var(--text-color); /* Change border color on focus */
+}
+
+.contact-section .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.contact-section .group form button:hover {
+    background-color: var(--text-color); /* Change background on hover */
+}
+
+/* Media Queries */
+@media (max-width: 850px) {
+    /* SECTION 1: Hero */
+    .hero-section .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    /* SECTION 1: Hero */
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section .headshot img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* NAVBAR */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+    }
+
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    /* SECTION 1: Hero */
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
+
+    /* SECTION 2: Skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
+    }
+
+    /* SECTION 3: Contact */
+    .contact-section {
+        padding: 0 20px;
+    }
+    .contact-section .group {
+        flex-direction: column;
+    }
+}
