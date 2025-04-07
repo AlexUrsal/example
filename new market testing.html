@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <style>
+        .products .box-container .box:hover.description {
+            opacity: 1;
+        }
+
+        .products .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+
+        .products .box-container .box {
+            text-align: center;
+            border: var(--border);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .products .box-container .box .icons {
+            position: absolute;
+            top: 1rem;
+            left: -100%;
+            width: 100%;
+            display: flex;
+            padding: 0 1rem;
+            transition: left 0.3s ease;
+            z-index: 10;
+        }
+
+        .products .box-container .box:hover .icons {
+            left: 0;
+        }
+
+        .products .box-container .box .icons a {
+            height: 4rem;
+            width: 4rem;
+            line-height: 4rem;
+            font-size: 1.8rem;
+            border: var(--border);
+            color: #fff;
+            margin: .3rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        .products .box-container .box .icons a:hover {
+            background: var(--main-color);
+        }
+
+        .products .box-container .box .image {
+            padding: 3
+            
+        }
+
+        .products .box-container .box .image img {
+            height: 20rem;
+            width: 30rem; 
+            object-fit: contain; 
+        }
+
+        .products .box-container .box .content h3{
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .products .box-container .box .content .stars{
+            padding: 1rem 0;
+        }
+
+        .products .box-container .box .content .stars i {
+            font-size: 1.7rem;
+            color: var(--main-color);
+        }
+
+        .products .box-container .box .content .price{
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .products .box-container .box .content .price span{
+            text-decoration: line-through;
+            font-weight: lighter;
+            font-size: 1.5rem;
+        }
+
+        .products .box-container .box .content p {
+            font-size: 1.6rem;
+            color: #ccc;
+            padding-bottom: .5rem;
+            line-height: 1.8;
+        }
+
+        .products .box-container .box .detail ul {
+        list-style: none; 
+        padding: 0;
+        }
+
+        .products .box-container .box .detail ul li {
+        font-size: 1.4rem;
+        color: #ccc;
+        margin-bottom: 0.3rem;
+        }
+
+        .products .box-container .box:hover {
+            background-color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Product Section Start -->
+    <sectio class="products" id="products">
+
+        <h1 class="heading"> our <span> products </span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart" title="Add to Cart"></a>
+                    <a href="#" class="fas fa-heart" title="Add to Wishlist"></a>
+                    <a href="#" class="fas fa-eye" title="View Details"></a>
+                </div>
+                <div class="image">
+                    <img src="images/Alpha cx110.png" alt="Wave Alpha">
+                </div>
+                <div class="content">
+                    <h3>Wave Alpha</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₱41,799 <span>₱45,799</span></div>
+                    <p>The Wave Alpha is a reliable and fuel-efficient motorcycle, perfect for daily commuting.</p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>Engine: 110cc</li>
+                        <li>Fuel Efficiency: 60 km/L</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart" title="Add to Cart"></a>
+                    <a href="#" class="fas fa-heart" title="Add to Wishlist"></a>
+                    <a href="#" class="fas fa-eye" title="View Details"></a>
+                </div>
+                <div class="image">
+                    <img src="images/Alpha CX125.png" alt="Wave 110">
+                </div>
+                <div class="content">
+                    <h3>Wave CX 125</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₱53,699 <span>₱56,699</span></div>
+                    <p>The Wave CX 125 offers a comfortable ride and good handling, making it ideal for city rides.</p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>Engine: 125cc</li>
+                        <li>Fuel Efficiency: 58 km/L</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart" title="Add to Cart"></a>
+                    <a href="#" class="fas fa-heart" title="Add to Wishlist"></a>
+                    <a href="#" class="fas fa-eye" title="View Details"></a>
+                </div>
+                <div class="image">
+                    <img src="images/Wave R110.png" alt="RS150R">
+                </div>
+                <div class="content">
+                    <h3>Wave 110R</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">₱80,799 <span>₱82,799</span></div>
+                    <p>The Wave 110R is a sporty and powerful underbone motorcycle for those who love speed.</p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>Engine: 110cc</li>
+                        <li>Fuel Efficiency: 65 km/L</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart" title="Add to Cart"></a>
+                    <a href="#" class="fas fa-heart" title="Add to Wishlist"></a>
+                    <a href="#" class="fas fa-eye" title="View Details"></a>
+                </div>
+                <div class="image">
+                    <img src="images/Winner X (2).png" alt="Winner X">
+                </div>
+                <div class="content">
+                    <h3>Winner X</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">₱129,799 <span>₱135,799</span></div>
+                    <p>The Winner X offers great performance, safety features, and a modern design.</p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li>Engine: 150cc</li>
+                        <li>Fuel Efficiency: 45 km/L</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </sectio>
+    <!-- Product Section End -->
+
+    <script>
+        function redirectToLogin() {
+            alert("Redirecting to the login page...");
+            window.location.href = "login.php";
+        }
+    </script>
+
+</body>
+</html>
